@@ -1,2 +1,12 @@
 @import 'tailwindcss';
 @plugin 'daisyui';
+h1{
+    font-size: 30px;
+    border: 2px solid green;
+    padding:20px;
+    border-radius: 8px;
+    margin: 20px;
+}
+a.active{
+    text-decoration: underline;
+}
