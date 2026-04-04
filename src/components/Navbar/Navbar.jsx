@@ -9,6 +9,8 @@ const Navbar = () => {
             <NavLink to={'/main/about'}>About</NavLink>
             <NavLink to={'/main/mobile'}>Mobile</NavLink>
             <NavLink to='/main/laptop'>Laptop</NavLink>
+            <NavLink to={"/main/users"}>Users</NavLink>
+            {/* <NavLink to={"/main/users2"}>Users2</NavLink> */}
         </div>
     );
 };
