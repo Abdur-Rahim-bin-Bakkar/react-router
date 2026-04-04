@@ -11,6 +11,7 @@ import Laptop from './components/Laptop/Laptop.jsx'
 import Users from './components/Users/Users.jsx'
 import Users2 from './components/Users2/Users2.jsx'
 import UserDet from './components/UserDet/UserDet.jsx'
+import NotFound from './components/NotFound/NotFound.jsx'
 
 // const data =async ()=>{
 //   return fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
@@ -37,10 +38,11 @@ const router = createBrowserRouter([
       //   </Suspense>
       // },
       {
-        path:"users/:dynamic",
+        path:":dynamic",
         Component: UserDet,
         loader:({params:myParams}) =>{
           console.log(myParams)
+          return myParams.dynamic
         }
       }
 
@@ -49,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     Component: App
+  },
+  {
+    path:"*",
+    Component:NotFound
   }
 ])
 

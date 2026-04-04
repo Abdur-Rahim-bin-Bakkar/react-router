@@ -1,10 +1,11 @@
 import React from 'react';
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useLocation } from 'react-router';
 import User from '../User/User';
 
 const Users = () => {
     const data = useLoaderData()
-    console.log(data)
+    const location = useLocation()
+    console.log(location)
     return (
         <div>
             <h1>this is users pages</h1>
